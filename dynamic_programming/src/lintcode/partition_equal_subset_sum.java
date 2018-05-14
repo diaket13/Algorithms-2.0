@@ -107,10 +107,10 @@ public class partition_equal_subset_sum {
             return false;
         }
         //排序完毕,接下来开始动态规划
-        return dynamicFind(sorts,positions,length,count);
+        return dynamicFind(sorts,length,count);
     }
 
-    private boolean dynamicFind(int[] sorts,int[] positions,int length,int count){
+    private boolean dynamicFind(int[] sorts,int length,int count){
         /*问题分析:
         * 可以转变为length长的数组中是否存在元素和为count的子数组问题
         * */
@@ -122,7 +122,7 @@ public class partition_equal_subset_sum {
             if(length==1){
                 return false;
             }
-            return dynamicFind(sorts, positions, length-1, count);
+            return dynamicFind(sorts, length-1, count);
         }else if (max == count){
             //直接找到了
             return true;
@@ -145,7 +145,7 @@ public class partition_equal_subset_sum {
             if(nextLength==0 || length==1){
                 return false;
             }
-            return dynamicFind(sorts, positions, nextLength, nextCount) || dynamicFind(sorts, positions, length-1, count);
+            return dynamicFind(sorts, nextLength, nextCount) || dynamicFind(sorts, length-1, count);
         }
     }
 }
