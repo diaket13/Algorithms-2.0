@@ -14,6 +14,7 @@ public class partition_equal_subset_sum {
     public boolean canPartition(int[] nums) {
         //先排序
         //因为都不大于100 空间换时间 直接用计数排序
+        int count = 0;
         int[] positions = new int[101];
         int[] sorts = new int[nums.length];
         for(int i : nums){
@@ -26,20 +27,25 @@ public class partition_equal_subset_sum {
             int num = nums[i];
             int position = --positions[num];
             sorts[position]=num;
+            //顺便计算出数组的元素和
+            count += num;
         }
-        int count = 0;
-        int max = -1;
-        for(int i : nums){
-            count += i;
-            max = max > i ? max:i;
-        }
-        //if max * 2 > count, can't find
-        if(max * 2 > count){
+        //排序完毕,接下来开始动态规划
+        if((count & 1) == 0){
+            count >>= 1;
+        }else{
+            //元素和非偶,直接关了
             return false;
         }
-        if(max * 2 == count){
-            return true;
-        }
+        return true;
     }
 
+    public static void main(String[] args) {
+        int i = 2222222;
+        System.out.println(i&1);
+        int j = 3;
+        System.out.println(j&1);
+        System.out.println(i>>1);
+        System.out.println(i);
+    }
 }
