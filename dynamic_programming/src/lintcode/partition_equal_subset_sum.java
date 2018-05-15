@@ -3,6 +3,7 @@ package lintcode;
 import java.util.LinkedList;
 
 /**
+ * CA
  * 588号题
  * https://www.lintcode.com/problem/partition-equal-subset-sum/description
  * @author wangw
