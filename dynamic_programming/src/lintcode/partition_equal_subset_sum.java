@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * CA
- * 588号题
+ * 588. 划分和相等的子集
  * https://www.lintcode.com/problem/partition-equal-subset-sum/description
  * @author wangw
  * @version $$Id: partition_equal_subset_sum, v 0.1 2018/5/14 0014 19:13 wangw Exp $$

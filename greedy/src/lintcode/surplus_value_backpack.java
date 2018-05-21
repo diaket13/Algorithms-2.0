@@ -2,7 +2,7 @@ package lintcode;
 
 /**
  * WA
- * 971号题
+ * 971. 剩余价值背包
  * https://www.lintcode.com/problem/surplus-value-backpack/description
  */
 public class surplus_value_backpack {
