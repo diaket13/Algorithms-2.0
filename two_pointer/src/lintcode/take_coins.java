@@ -1,6 +1,7 @@
 package lintcode;
 
 /**
+ * CA
  * 1399. 拿硬币
  * https://www.lintcode.com/problem/take-coins/description
  * @author wangw
