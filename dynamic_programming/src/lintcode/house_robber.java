@@ -47,5 +47,6 @@ public class house_robber {
         f(n-2) + n > f(n-1) ? f(n-2) = n : f(n-1)
          */
         //f(n) = max(f(n-1),f(n-2)+a[n-1]);
+        return 0;
     }
 }
