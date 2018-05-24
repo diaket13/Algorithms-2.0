@@ -1,6 +1,7 @@
 package lintcode;
 
 /**
+ * CA
  * 392. 打劫房屋
  * https://www.lintcode.com/problem/house-robber/description
  */
