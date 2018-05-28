@@ -14,18 +14,19 @@ public class median_of_two_sorted_arrays {
     */
     public double findMedianSortedArrays(int[] A, int[] B) {
         int num = A.length + B.length;
-        if ((num & 1) == 1) {
-            return findSingle(A, B, num / 2 + 1);
-        } else {
-            return findDouble(A, B, num / 2, num / 2 + 1);
+        int halfNum = num / 2 + 1;
+        int position;
+        if(A.length > B.length){
+            position = B.length / 2 + 1;
+            findMedian(halfNum,position,B,A);
+        }else {
+            position = A.length / 2 + 1;
+            findMedian(halfNum,position,A,B);
         }
     }
 
-    private double findSingle(int[] a, int[] b, int position) {
-        return 0.0;
-    }
-
-    private double findDouble(int[] a, int[] b, int left, int right) {
-        return 0.5;
+    double findMedian(int halfNum,int position,int[] divide,int[] other){
+        int aNum = divide[position];
+        int bNum = other[halfNum-position];
     }
 }
