@@ -3,6 +3,7 @@ package linked_list.lintcode;
 import java.util.LinkedList;
 
 /**
+ * CA
  * 420. 报数
  * https://www.lintcode.com/problem/count-and-say/description
  * @author wangw
