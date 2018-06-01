@@ -15,7 +15,7 @@ public class circular_array_loop {
         /*把数组链表化
         两个注意点:
         1.走过的位置,将其置为0,用于当其他的路线走到这里的时候就直接结束.节省时间
-
+        2.这个代码有个BUG 在于无法解决P型的环 这都CA了 姜硬
          */
         if(nums.length ==0){
             return false;
